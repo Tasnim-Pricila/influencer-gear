@@ -1,0 +1,245 @@
+/*----------------------------
+ Google Fonts
+ ----------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,500;1,500&display=swap');
+
+/*---------------
+ Universal Styles
+ ------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------
+Common Styles
+ ------------------*/
+
+body{ 
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 3.25rem;
+}
+h2{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+small{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    
+}
+.fa-arrow-right{
+    padding-left: 8px;
+}
+
+
+/*-----------------
+ Navbar Styles
+ ----------------------- */
+
+header{
+    height: 100vh;
+    margin-bottom: 70px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 25vh;
+    align-items: center;
+}
+.navbar-menu ul{
+    display: flex;
+}
+.navbar-menu ul{
+    list-style-type: none;
+}
+.navbar-menu ul li{
+    padding-right: 34px;
+}
+.navbar-menu ul li:last-child{
+    padding-right: 0px;
+}
+.navbar-menu ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #3A3A3A;
+}
+
+/*-----------------------
+ Header Area Style
+ --------------------*/
+
+.header-area{
+    display: flex;
+    align-items: center;
+    gap: 131px;
+    height: calc(100vh - 25vh);
+}
+.header-title{
+    padding-bottom: 16px;
+    font-weight: 700;
+}
+.header-paragraph{
+    padding-bottom: 16px;
+    font-weight: 500;
+}
+.preebook-button{
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 41px;
+    color: white;
+    font-weight: 700;
+}
+
+.header-image{
+    background-image: url(images/Circle\ design.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ------------------------
+Company-Logo Styles
+---------------------------------*/
+
+.companies-logo{
+    padding: 36px 0px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+/* -------------------------
+Popular Collections 
+---------------------------------*/
+
+.popular-collections{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.collections-heading{
+    
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.popular-products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+.single-product{
+    padding: 17px;
+    border: 1px solid #f7f6f6;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(197, 194, 194, 0.699);
+}
+.single-product img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.product-price{
+    font-weight: 500;
+}
+.product-rating .filled, .half-filled{
+    color: #FB8200;
+}
+.product-rating span{
+    padding-left: 10px;
+}
+
+.see-more{
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    align-items: center;
+    color: #E02C6D;
+    padding-right: 20px ;
+    
+}
+
+/*--------------------
+ Our Services
+ --------------------- */
+ .services-title{
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 30px;
+ }
+.our-services{
+    background-color: #F6F7FB;
+    padding: 70px 0;
+    margin-bottom: 100px;
+}
+.all-services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+}
+.single-service{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.service h3{
+    text-transform: uppercase;
+}
+.service p{
+    font-family: 'Inter', sans-serif;
+
+}
+.single-service .fas{
+    font-size: 50px;
+    color: #ee9dbd;
+}
+
+/*-----------------
+ Footer Area
+ -------------------- */
+
+footer{
+    background-color: black;
+    padding: 60px 0;
+}
+
+.footer-area{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.footer-icon .fab{
+    margin-right: 16px ;
+    margin-top: 16px;
+    border: 1px solid none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
