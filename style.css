@@ -23,6 +23,7 @@ body{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0px 20px;
 }
 h1{
     font-size: 3.25rem;
@@ -51,8 +52,8 @@ small{
  ----------------------- */
 
 header{
-    height: 100vh;
-    margin-bottom: 70px;
+    min-height: 100vh;
+    margin-bottom: 50px;
 }
 .navbar{
     display: flex;
@@ -87,14 +88,17 @@ header{
     align-items: center;
     gap: 131px;
     height: calc(100vh - 25vh);
+    padding-top:50px ;
 }
 .header-title{
     padding-bottom: 16px;
     font-weight: 700;
+    width: 90%;
 }
 .header-paragraph{
     padding-bottom: 16px;
     font-weight: 500;
+    width: 90%;
 }
 .preebook-button{
     background-color: #E02C6D;
@@ -242,4 +246,84 @@ footer{
     padding: 10px;
 }
 
+/* -----------
+Style For Mobile Device 
+----------------*/
 
+@media screen and (max-width:688px) {
+    .navbar-menu{
+        display: none;
+    }
+    .header-area{
+        flex-direction:column-reverse;
+        height: fit-content;
+        gap: 5px;
+    }
+    .header-image img{
+        width: 300px;
+    }
+    .header-text{
+        text-align: center;
+    }
+    .companies-logo{ 
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       gap: 19px;
+        
+    }
+    .companies-logo img{
+        width: 16%;
+       
+    }
+    .popular-products{
+        grid-template-columns: repeat(1, 1fr);      
+    }
+    .all-services{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        justify-items: flex-start;
+    }
+
+}
+
+/* -----------
+Style For Tablet 
+----------------*/
+@media screen and (min-width:689px) and (max-width:992px){
+    .header-area{
+        flex-direction:column-reverse;
+        height: fit-content;
+        gap: 5px;
+    }
+    .header-image img{
+        width: 300px;
+    }
+    .header-text{
+        text-align: center;
+    }
+    .companies-logo{ 
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       gap: 20px;
+        
+    }
+    .companies-logo img{
+        width: 16%;   
+        
+    }
+    .popular-products{
+        grid-template-columns: repeat(2,1fr);      
+    }
+    .all-services{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    .single-service{
+       flex-direction: column;
+    }
+
+}
