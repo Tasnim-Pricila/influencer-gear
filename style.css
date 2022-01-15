@@ -99,7 +99,6 @@ header{
     align-items: center;
     gap: 131px;
     height: calc(100vh - 20vh);
-    padding-top:30px ;
 }
 .header-title{
     padding-bottom: 16px;
@@ -110,7 +109,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+    flex: 1;
 }
 .header-paragraph{
     padding-bottom: 16px;
@@ -118,18 +117,55 @@ header{
     width: 90%;
 }
 .preebook-button{
+    display: flex;
+    align-items: center;
     background-color: #E02C6D;
     padding: 10px 24px;
     border: none;
     border-radius: 41px;
     color: white;
     font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; 
 }
+
+@keyframes slide {
+    20%{       
+        background-color: blueviolet;     
+    }
+    40%{       
+        background-color: rgb(21, 111, 230);     
+    }
+    60%{       
+        background-color: rgb(86, 238, 81);     
+    }
+    80%{       
+        background-color: rgb(226, 214, 43);     
+    }
+    100%{
+        background-color: rgb(226, 43, 43);
+    }
+}
+.preebook-button:hover{
+    color: black;
+    animation: slide 2s linear infinite ;
+   
+}
+
+
+  
 
 .header-image{
     background-image: url(images/Circle\ design.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow:hidden;
+}
+
+.header-image:hover img{
+    transform: scale(1.5) rotate(30deg);
+    transition: .7s linear;
 }
 
 /* ------------------------
