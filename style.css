@@ -55,24 +55,35 @@ header{
     min-height: 100vh;
     margin-bottom: 50px;
 }
+
+#navbar-toggler{
+    display: none;
+}
+.navbar-toggler-icon{
+    display: none;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
-    height: 25vh;
+    min-height: 20vh;
     align-items: center;
+    max-width: 100%;
 }
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
 .navbar-menu ul{
     display: flex;
-}
-.navbar-menu ul{
     list-style-type: none;
 }
+
 .navbar-menu ul li{
     padding-right: 34px;
 }
-.navbar-menu ul li:last-child{
-    padding-right: 0px;
-}
+
 .navbar-menu ul li a{
     text-decoration: none;
     font-weight: 600;
@@ -87,13 +98,19 @@ header{
     display: flex;
     align-items: center;
     gap: 131px;
-    height: calc(100vh - 25vh);
-    padding-top:50px ;
+    height: calc(100vh - 20vh);
+    padding-top:30px ;
 }
 .header-title{
     padding-bottom: 16px;
     font-weight: 700;
     width: 90%;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
 }
 .header-paragraph{
     padding-bottom: 16px;
@@ -251,9 +268,37 @@ Style For Mobile Device
 ----------------*/
 
 @media screen and (max-width:688px) {
-    .navbar-menu{
-        display: none;
+
+/* Navbar */
+    .navbar-toggler-icon{
+        display: block;
     }
+    .navbar{
+        position:relative;
+    }
+    .navbar-menu ul{
+        position: absolute;
+        left: 0;
+        top: -500px ;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 20px 0px;
+        background-color: black;
+    }
+    .navbar-menu ul li a{
+        color: white;
+    }
+    #navbar-toggler:checked ~ .navbar-menu ul{
+        top: 120px;
+        transition: .6s ease-in-out;
+    }
+
+/* Header  */
     .header-area{
         flex-direction:column-reverse;
         height: fit-content;
@@ -263,8 +308,11 @@ Style For Mobile Device
         width: 300px;
     }
     .header-text{
+        align-items: center;
         text-align: center;
     }
+
+/* Company Logo */
     .companies-logo{ 
        display: flex;
        flex-wrap: wrap;
@@ -274,12 +322,15 @@ Style For Mobile Device
         
     }
     .companies-logo img{
-        width: 16%;
-       
+        width: 15%;     
     }
+
+/* Popular Collections */
     .popular-products{
         grid-template-columns: repeat(1, 1fr);      
     }
+
+/* Our Services */ 
     .all-services{
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
@@ -292,6 +343,37 @@ Style For Mobile Device
 Style For Tablet 
 ----------------*/
 @media screen and (min-width:689px) and (max-width:992px){
+
+ /* Navbar */
+    .navbar-toggler-icon{
+        display: block;
+    }
+    .navbar{
+        position:relative;
+    }
+    .navbar-menu ul{
+        position: absolute;
+        left: 0;
+        top: -500px ;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 20px 0px;
+        background-color: black;
+    }
+    .navbar-menu ul li a{
+        color: white;
+    }
+    #navbar-toggler:checked ~ .navbar-menu ul{
+        top: 120px;
+        transition: .6s ease-in-out;
+    }
+
+ /* Header  */   
     .header-area{
         flex-direction:column-reverse;
         height: fit-content;
@@ -303,6 +385,8 @@ Style For Tablet
     .header-text{
         text-align: center;
     }
+
+/* Company Logo */
     .companies-logo{ 
        display: flex;
        flex-wrap: wrap;
@@ -312,12 +396,15 @@ Style For Tablet
         
     }
     .companies-logo img{
-        width: 16%;   
-        
+        width: 16%;         
     }
+
+/* Popular Collections */
     .popular-products{
         grid-template-columns: repeat(2,1fr);      
     }
+
+/* Our Services */ 
     .all-services{
         grid-template-columns: repeat(2,1fr);
         gap: 30px;
